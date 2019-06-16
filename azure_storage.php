@@ -10,7 +10,9 @@
 function add_web_component()
 {
     // Todo: Create admin page for inputs
-    return "<blob-storage container-name='mysetupsheet' content-type='image/jpeg'></blob-storage>";
+    $container_name = get_option('azure_container_name');
+
+    return "<blob-storage container-name='$container_name' content-type='image/jpeg'></blob-storage>";
 }
 
 function enqueue_custom_element()
@@ -50,6 +52,9 @@ add_action('plugins_loaded', 'tutsplus_custom_admin_settings');
  */
 function tutsplus_custom_admin_settings()
 {
-    $plugin = new Submenu(new Submenu_Page());
+    $serializer = new Serializer();
+    $serializer->init();
+
+    $plugin = new Submenu(new Submenu_Page($serializer));
     $plugin->init();
 }
