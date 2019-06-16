@@ -10,7 +10,7 @@
                 <p>
                     <label>Azure Storage Container Name</label>
                     <br />
-                    <input type="text" name="container-name" value="" />
+                    <input type="text" name="container-name" value="<?php echo get_option('azure_container_name') ?>" />
                 </p>
                 <?php
                 wp_nonce_field('acme-settings-save', 'acme-custom-message');
