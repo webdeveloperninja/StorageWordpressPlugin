@@ -9,7 +9,6 @@
 
 function add_web_component()
 {
-    // Todo: Create admin page for inputs
     $container_name = get_option('azure_container_name');
 
     return "<blob-storage container-name='$container_name' content-type='image/jpeg'></blob-storage>";
