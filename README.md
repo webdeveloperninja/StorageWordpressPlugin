@@ -6,6 +6,7 @@ Wordpress Shortcode for Azure Storage
 3. Add shortcode to display the Azure Storage Component
 `[azure-storage]`
 <br>
+<p>Demo Component: https://webstoragecomponent.z22.web.core.windows.net/shell.html</p>
 <p>Based on Storage Web Component and Function</p>
 https://github.com/webdeveloperninja/StorageWebComponent
 <br/>
